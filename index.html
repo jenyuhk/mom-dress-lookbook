@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mom's Wedding Dress Lookbook — with images</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #F7F1E6;
+  --cream-deep: #EFE6D2;
+  --ink: #2E2418;
+  --ink-soft: #6B5C47;
+  --gold: #A5824D;
+  --gold-soft: #C9A86A;
+  --line: #D9CDB4;
+  --card-bg: #FDF9EF;
+  --shadow: 0 4px 24px rgba(60, 45, 25, 0.08);
+}
+
+html, body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Cover ───────────────────────────────────────── */
+.cover {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 32px 60px;
+  text-align: center;
+}
+.cover .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.cover h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(40px, 8vw, 64px);
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.cover .subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 32px auto;
+  width: 200px;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.divider .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.cover .intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 24px auto;
+  max-width: 560px;
+}
+.cover .meta {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+}
+.cover .meta span { white-space: nowrap; }
+
+/* ─── Notes section ───────────────────────────────── */
+.notes {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  padding: 32px;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.notes h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.notes ul { list-style: none; padding: 0; }
+.notes li {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.notes li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* ─── Dress Grid ──────────────────────────────────── */
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 720px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 32px; padding: 0 32px 80px; }
+}
+
+/* ─── Card ────────────────────────────────────────── */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+
+.card .number {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--gold);
+  z-index: 3;
+  background: var(--cream);
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+
+.card .image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--cream-deep);
+  overflow: hidden;
+}
+
+/* ─── Carousel ────────────────────────────────────── */
+.carousel {
+  position: absolute;
+  inset: 0;
+  background: var(--cream-deep);
+}
+.carousel .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+.carousel .slide.active { opacity: 1; z-index: 2; }
+
+.carousel .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(253, 249, 239, 0.88);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: serif;
+  transition: background 0.2s, transform 0.15s;
+  opacity: 0;
+}
+.image-wrap:hover .carousel .nav { opacity: 1; }
+@media (hover: none) { .carousel .nav { opacity: 1; } }
+.carousel .nav:hover { background: var(--cream); transform: translateY(-50%) scale(1.05); }
+.carousel .nav.prev { left: 10px; }
+.carousel .nav.next { right: 10px; }
+
+.carousel .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 4;
+  padding: 6px 10px;
+  background: rgba(253, 249, 239, 0.7);
+  border-radius: 20px;
+}
+.carousel .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(46, 36, 24, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.carousel .dot.active { background: var(--ink); transform: scale(1.25); }
+.carousel .dot:hover { background: var(--ink-soft); }
+
+/* Placeholder / no-image fallback */
+.card .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+  padding: 24px;
+  z-index: 1;
+}
+.card .placeholder.fallback { display: none; }
+.card .swatch {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid var(--cream);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  margin-bottom: 18px;
+}
+.card .swatch-label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.card .silhouette-icon {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  text-align: center;
+}
+.card .no-image-note {
+  margin-top: 14px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.card .tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  z-index: 4;
+}
+
+.card .body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card .brand {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.card .name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.card .specs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.card .specs .price {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.card .specs .sep { color: var(--line); font-size: 14px; }
+.card .specs .detail {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.card .color-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.card .color-row .swatch-mini {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+.card .color-row .label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.card .color-row .label strong { color: var(--ink); font-weight: 600; }
+
+.card .why {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  flex: 1;
+  margin-bottom: 18px;
+}
+.card .shop-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--ink);
+  padding: 12px 20px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 2px;
+}
+.card .shop-link:hover { background: var(--ink); color: var(--cream); }
+.card .shop-link .arrow { margin-left: 8px; font-size: 14px; }
+
+/* ─── Footer ──────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 40px 32px 60px;
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  background: var(--cream);
+}
+footer .footer-divider {
+  margin: 0 auto 24px;
+  width: 100px;
+  height: 1px;
+  background: var(--line);
+  position: relative;
+}
+footer .footer-divider::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+footer p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 8px;
+}
+footer .signoff {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+/* Featured card spans full width on desktop */
+@media (min-width: 720px) {
+  .card.featured { grid-column: 1 / -1; flex-direction: row; }
+  .card.featured .image-wrap { width: 50%; aspect-ratio: 1 / 1; }
+  .card.featured .body { width: 50%; padding: 40px; justify-content: center; }
+  .card.featured .name { font-size: 28px; }
+}
+</style>
+</head>
+<body>
+
+  <header class="cover">
+    <div class="eyebrow">a curated lookbook · with images</div>
+    <h1>for mom</h1>
+    <div class="subtitle">mother-of-the-groom dresses for the garden wedding</div>
+    <div class="divider"><span class="dot"></span></div>
+    <p class="intro">
+      twenty hand-picked dresses across sage, dusty blue, mulberry, navy, and warm neutrals — all in lightweight fabrics for a 75°+ outdoor ceremony, all in your size, all under $500, and all in stock now to arrive well before may 10.
+    </p>
+    <div class="meta">
+      <span>· size 12 ·</span>
+      <span>· $200 – 500 ·</span>
+      <span>· 75°+ garden ·</span>
+      <span>· in stock now ·</span>
+    </div>
+  </header>
+
+  <section class="notes">
+    <h2>a few notes before you scroll</h2>
+    <ul>
+      <li>each card now has a carousel — hover/tap the arrows or dots to flip through the front, back, side, and detail shots</li>
+      <li>the bride wears white and the kids wear pearl + warm gold — i picked colors that complement but don't compete (no champagne / cream / blush in the main picks)</li>
+      <li>everything here is in lightweight fabric — chiffon, stretch satin, taffeta, silk — nothing heavy that'll be miserable in heat</li>
+      <li>i marked the standouts with little tags so you don't have to hold the whole thing in your head: editor's choice, best for heat, classic mog, etc.</li>
+      <li>tap "shop the dress" on anything you love and it'll take you straight to the order page</li>
+      <li>a handful of dresses had their product pages removed since the first draft — those still show the color + silhouette so you can reference them</li>
+    </ul>
+  </section>
+
+  <main class="grid">
+
+    <article class="card featured">
+      <div class="image-wrap">
+        <div class="number">No. 01</div>
+        <div class="tag">EDITOR&#x27;S CHOICE</div>
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/91720722_031_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Scottie One-Shoulder Stretch Satin Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/91720722_031_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Scottie One-Shoulder Stretch Satin Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/91720722_031_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Scottie One-Shoulder Stretch Satin Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/91720722_031_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Scottie One-Shoulder Stretch Satin Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#9CAE8E;"></div><div class="swatch-label">Sage Green</div><div class="silhouette-icon">Column maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Scottie One-Shoulder Stretch Satin Maxi</div>
+        <div class="specs">
+          <span class="price">$228</span>
+          <span class="sep">·</span>
+          <span class="detail">Column maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">One-shoulder</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#9CAE8E;"></div>
+          <div class="label">recommended in <strong>Sage Green</strong></div>
+        </div>
+        <div class="why">The lookbook hero. One-shoulder is the most-photographed silhouette of 2026 and the sage version photographs beautifully against garden greenery. Comes in 8 colors so easy to switch if she prefers steel blue, navy, or orchid purple.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-scottie-one-shoulder-side-slit-stretch-satin-maxi-dress?color=031" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 02</div>
+        <div class="tag">BEST FOR HEAT</div>
+        <div class="carousel" data-count="3">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/97975270_259_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Rosie Mock-Neck Pleated Chiffon Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/97975270_259_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Rosie Mock-Neck Pleated Chiffon Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/97975270_259_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Rosie Mock-Neck Pleated Chiffon Maxi view 3" loading="lazy" class="slide" data-idx="2">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#7E3F4D;"></div><div class="swatch-label">Mulberry Wine</div><div class="silhouette-icon">Pleated maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Rosie Mock-Neck Pleated Chiffon Maxi</div>
+        <div class="specs">
+          <span class="price">$348</span>
+          <span class="sep">·</span>
+          <span class="detail">Pleated maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sleeveless, high neck</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#7E3F4D;"></div>
+          <div class="label">recommended in <strong>Mulberry Wine</strong></div>
+        </div>
+        <div class="why">Chiffon is the most heat-friendly fabric in the entire MOG category — it moves with the breeze and won&#x27;t cling in 75° weather. The high mock neck reads more elegant than sexy, perfect for the mother-of-groom role. Pleating creates beautiful drape in photos.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-rosie-mock-neck-pleated-chiffon-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 03</div>
+        
+        <div class="carousel" data-count="3">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/98048598_526_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Kira Strapless Printed Satin A-Line Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/98048598_526_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Kira Strapless Printed Satin A-Line Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/98048598_526_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Kira Strapless Printed Satin A-Line Maxi view 3" loading="lazy" class="slide" data-idx="2">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#C8A2A8;"></div><div class="swatch-label">Soft Floral Print</div><div class="silhouette-icon">A-line maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Kira Strapless Printed Satin A-Line Maxi</div>
+        <div class="specs">
+          <span class="price">$348</span>
+          <span class="sep">·</span>
+          <span class="detail">A-line maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Strapless</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#C8A2A8;"></div>
+          <div class="label">recommended in <strong>Soft Floral Print</strong></div>
+        </div>
+        <div class="why">The only print option in the lookbook. Soft floral satin reads romantic without being matronly, and the A-line skirt is universally flattering on size 12. Strapless, so she&#x27;d want a wrap or shawl for the ceremony.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-kira-strapless-printed-satin-a-line-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 04</div>
+        
+        <div class="carousel" data-count="3">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/97039226_102_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Brooke Puff-Sleeve V-Neck Stretch Midi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/97039226_102_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Brooke Puff-Sleeve V-Neck Stretch Midi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/97039226_102_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Brooke Puff-Sleeve V-Neck Stretch Midi view 3" loading="lazy" class="slide" data-idx="2">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#7E94A8;"></div><div class="swatch-label">Dusty Blue</div><div class="silhouette-icon">Fit-and-flare midi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Brooke Puff-Sleeve V-Neck Stretch Midi</div>
+        <div class="specs">
+          <span class="price">$248</span>
+          <span class="sep">·</span>
+          <span class="detail">Fit-and-flare midi</span>
+          <span class="sep">·</span>
+          <span class="detail">Puff sleeves</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#7E94A8;"></div>
+          <div class="label">recommended in <strong>Dusty Blue</strong></div>
+        </div>
+        <div class="why">Midi length means no grass-dragging hem at an outdoor ceremony. The puff sleeves are the modern answer to traditional MOG sleeves — current and feminine without being childish. Stretch fabric = comfortable for a long day.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-brooke-puff-sleeve-v-neck-stretch-midi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 05</div>
+        <div class="tag">MOST COMFORTABLE</div>
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/95210811_041_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Tiana One-Shoulder Satin Kaftan Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/95210811_041_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Tiana One-Shoulder Satin Kaftan Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/95210811_041_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Tiana One-Shoulder Satin Kaftan Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/95210811_041_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Tiana One-Shoulder Satin Kaftan Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#3E574A;"></div><div class="swatch-label">Forest Green</div><div class="silhouette-icon">Kaftan maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Tiana One-Shoulder Satin Kaftan Maxi</div>
+        <div class="specs">
+          <span class="price">$268</span>
+          <span class="sep">·</span>
+          <span class="detail">Kaftan maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">One-shoulder</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#3E574A;"></div>
+          <div class="label">recommended in <strong>Forest Green</strong></div>
+        </div>
+        <div class="why">Kaftan silhouette is the unsung hero of summer weddings — drapes loosely without clinging, photographs as effortless elegance, and is genuinely comfortable in heat. Forest green is bold but sophisticated for a mother-of-groom moment.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-tiana-one-shoulder-satin-kaftan-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 06</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/102065562_627_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Soraya Long-Sleeve Off-the-Shoulder Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/102065562_627_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Soraya Long-Sleeve Off-the-Shoulder Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/102065562_627_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Soraya Long-Sleeve Off-the-Shoulder Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/102065562_627_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Soraya Long-Sleeve Off-the-Shoulder Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#6B5039;"></div><div class="swatch-label">Mocha Brown</div><div class="silhouette-icon">Column maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Soraya Long-Sleeve Off-the-Shoulder Maxi</div>
+        <div class="specs">
+          <span class="price">$258</span>
+          <span class="sep">·</span>
+          <span class="detail">Column maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Long sleeves, off-shoulder</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#6B5039;"></div>
+          <div class="label">recommended in <strong>Mocha Brown</strong></div>
+        </div>
+        <div class="why">Long sleeves WITH off-the-shoulder is the cleverest hack — gives the elegance and coverage of long sleeves but keeps the décolletage open so she stays cool. Mocha brown is unexpected and very 2026 for warm-toned blondes.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-soraya-long-sleeve-off-the-shoulder-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 07</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/102099595_001_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Rome One-Shoulder Sleeveless A-Line Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/102099595_001_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Rome One-Shoulder Sleeveless A-Line Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/102099595_001_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Rome One-Shoulder Sleeveless A-Line Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/102099595_001_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Rome One-Shoulder Sleeveless A-Line Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#1A1A1A;"></div><div class="swatch-label">Black</div><div class="silhouette-icon">A-line maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Rome One-Shoulder Sleeveless A-Line Maxi</div>
+        <div class="specs">
+          <span class="price">$248</span>
+          <span class="sep">·</span>
+          <span class="detail">A-line maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">One-shoulder</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#1A1A1A;"></div>
+          <div class="label">recommended in <strong>Black</strong></div>
+        </div>
+        <div class="why">If she wants the safe-but-elevated play, this is it. Black photographs cleanly in any light, the one-shoulder gives it modern interest, and the A-line skirt flows beautifully. The trick: pair with warm gold jewelry to tie into the kids&#x27; palette.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-rome-one-shoulder-sleeveless-a-line-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 08</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/103788345_037_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Caped Open-Back Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/103788345_037_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Caped Open-Back Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/103788345_037_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Caped Open-Back Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/103788345_037_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Caped Open-Back Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#3E574A;"></div><div class="swatch-label">Forest Green</div><div class="silhouette-icon">Column maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Caped Open-Back Maxi</div>
+        <div class="specs">
+          <span class="price">$248</span>
+          <span class="sep">·</span>
+          <span class="detail">Column maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Cape detail</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#3E574A;"></div>
+          <div class="label">recommended in <strong>Forest Green</strong></div>
+        </div>
+        <div class="why">The cape detail is the elevated touch that makes a $248 dress photograph like a $1,000 one. Open back keeps it cool in summer heat. Forest green feels grown-up and confident — a more interesting answer than sage if she wants something less expected.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-caped-open-back-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 09</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/102699774_059_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Ruffle Chiffon Maxi Dress view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/102699774_059_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Ruffle Chiffon Maxi Dress view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/102699774_059_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Ruffle Chiffon Maxi Dress view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/102699774_059_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Ruffle Chiffon Maxi Dress view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#D08773;"></div><div class="swatch-label">Soft Coral</div><div class="silhouette-icon">Flowy maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Ruffle Chiffon Maxi Dress</div>
+        <div class="specs">
+          <span class="price">$298</span>
+          <span class="sep">·</span>
+          <span class="detail">Flowy maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sleeveless</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#D08773;"></div>
+          <div class="label">recommended in <strong>Soft Coral</strong></div>
+        </div>
+        <div class="why">Chiffon again — the breeziest fabric in the budget. Soft ruffle detailing is romantic without being fussy, and coral is gorgeous on blondes (warm pink-orange that complements the skin instead of competing with the hair).</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-ruffle-chiffon-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 10</div>
+        
+        <div class="placeholder"><div class="swatch" style="background:#1F2A44;"></div><div class="swatch-label">Dark Navy</div><div class="silhouette-icon">A-line maxi</div><div class="no-image-note">image unavailable</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Taffeta Bow-Detailed Square-Neck A-Line Maxi</div>
+        <div class="specs">
+          <span class="price">$398</span>
+          <span class="sep">·</span>
+          <span class="detail">A-line maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sleeveless</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#1F2A44;"></div>
+          <div class="label">recommended in <strong>Dark Navy</strong></div>
+        </div>
+        <div class="why">Taffeta has more structure than satin without being heavy — it holds the A-line shape beautifully and reads more &#x27;expensive&#x27; on camera. Square neck is having a moment in 2026 wedding fashion. The bow detail keeps it feminine.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-taffeta-bow-detailed-square-neck-a-line-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 11</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/103788113_079_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Satin Cowled Scarf-Neck Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/103788113_079_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Satin Cowled Scarf-Neck Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/103788113_079_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Satin Cowled Scarf-Neck Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/103788113_079_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Satin Cowled Scarf-Neck Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#A88762;"></div><div class="swatch-label">Champagne Bronze</div><div class="silhouette-icon">Column maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Satin Cowled Scarf-Neck Maxi</div>
+        <div class="specs">
+          <span class="price">$228</span>
+          <span class="sep">·</span>
+          <span class="detail">Column maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sleeveless, cowl neck</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#A88762;"></div>
+          <div class="label">recommended in <strong>Champagne Bronze</strong></div>
+        </div>
+        <div class="why">Cowl scarf neckline is incredibly flattering — it draws the eye up to the face and softens the décolletage area, perfect for any size. Bronze is warmer than gold and complements blonde hair beautifully.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-satin-cowled-scarf-neck-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 12</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/100859883_030_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="One-Shoulder Scarf-Neck Asymmetric Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/100859883_030_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="One-Shoulder Scarf-Neck Asymmetric Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/100859883_030_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="One-Shoulder Scarf-Neck Asymmetric Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/100859883_030_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="One-Shoulder Scarf-Neck Asymmetric Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#9CAE8E;"></div><div class="swatch-label">Sage Green</div><div class="silhouette-icon">Asymmetric column maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">One-Shoulder Scarf-Neck Asymmetric Maxi</div>
+        <div class="specs">
+          <span class="price">$248</span>
+          <span class="sep">·</span>
+          <span class="detail">Asymmetric column maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">One-shoulder</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#9CAE8E;"></div>
+          <div class="label">recommended in <strong>Sage Green</strong></div>
+        </div>
+        <div class="why">A more architectural take on the one-shoulder trend — the asymmetric drape adds movement and interest without requiring any embellishment. Sage stays in the family without being predictable.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-one-shoulder-scarf-neck-asymmetric-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 13</div>
+        
+        <div class="placeholder"><div class="swatch" style="background:#D5B4B5;"></div><div class="swatch-label">Soft Pink</div><div class="silhouette-icon">Fit-and-flare maxi</div><div class="no-image-note">image unavailable</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Taffeta Sleeveless Knot-Front Fit &amp; Flare Maxi</div>
+        <div class="specs">
+          <span class="price">$398</span>
+          <span class="sep">·</span>
+          <span class="detail">Fit-and-flare maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sleeveless</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#D5B4B5;"></div>
+          <div class="label">recommended in <strong>Soft Pink</strong></div>
+        </div>
+        <div class="why">Fit-and-flare with a knot-front detail = the most modern flattering shape on the list. Knot draws the waist in, the flare conceals hips. Soft dusty pink is far enough from blush to not feel bridal-adjacent.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-taffeta-sleeveless-knot-front-fit-flare-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 14</div>
+        <div class="tag">BEST VALUE</div>
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/86604444_270_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Francesca High-Neck Stretch Satin Midi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/86604444_270_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Francesca High-Neck Stretch Satin Midi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/86604444_270_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Francesca High-Neck Stretch Satin Midi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/86604444_270_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Francesca High-Neck Stretch Satin Midi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#A595B2;"></div><div class="swatch-label">Dusty Lavender</div><div class="silhouette-icon">Column midi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">BHLDN</div>
+        <div class="name">Francesca High-Neck Stretch Satin Midi</div>
+        <div class="specs">
+          <span class="price">$198</span>
+          <span class="sep">·</span>
+          <span class="detail">Column midi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sleeveless, high neck</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#A595B2;"></div>
+          <div class="label">recommended in <strong>Dusty Lavender</strong></div>
+        </div>
+        <div class="why">The most affordable option in the lookbook — and arguably the most versatile. High-neck midi is the closest thing to a &#x27;capsule wardrobe&#x27; formal dress, wearable to any event for years. Lavender is unexpected and lovely on blondes.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/bhldn-francesca-high-neck-stretch-satin-midi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 15</div>
+        
+        <div class="carousel" data-count="3">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/106871544_066_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Cecile Wide-Sleeve Satin Gown view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/106871544_066_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Cecile Wide-Sleeve Satin Gown view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/106871544_066_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Cecile Wide-Sleeve Satin Gown view 3" loading="lazy" class="slide" data-idx="2">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#C8A87C;"></div><div class="swatch-label">Champagne Gold</div><div class="silhouette-icon">Column gown</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">Elliatt</div>
+        <div class="name">Cecile Wide-Sleeve Satin Gown</div>
+        <div class="specs">
+          <span class="price">$328</span>
+          <span class="sep">·</span>
+          <span class="detail">Column gown</span>
+          <span class="sep">·</span>
+          <span class="detail">Wide kimono sleeves</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#C8A87C;"></div>
+          <div class="label">recommended in <strong>Champagne Gold</strong></div>
+        </div>
+        <div class="why">Elliatt is an Australian brand stocked at Anthropologie that consistently nails the &#x27;effortless luxury&#x27; look. Wide kimono-style sleeves give drama without weight, perfect for hot weather. Caveat: champagne is bridal-adjacent — only consider if the bride explicitly approves.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/elliatt-cecile-wide-sleeve-satin-gown" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 16</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/103186854_238_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Kinley Strapless A-Line Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/103186854_238_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Kinley Strapless A-Line Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/103186854_238_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Kinley Strapless A-Line Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/103186854_238_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Kinley Strapless A-Line Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#A2B49C;"></div><div class="swatch-label">Dusty Sage</div><div class="silhouette-icon">Ball gown A-line</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">Dress The Population</div>
+        <div class="name">Kinley Strapless A-Line Maxi</div>
+        <div class="specs">
+          <span class="price">$348</span>
+          <span class="sep">·</span>
+          <span class="detail">Ball gown A-line</span>
+          <span class="sep">·</span>
+          <span class="detail">Strapless</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#A2B49C;"></div>
+          <div class="label">recommended in <strong>Dusty Sage</strong></div>
+        </div>
+        <div class="why">Dress the Population is the brand celebrities reach for at events because their dresses photograph far more expensive than they are. Built-in shapewear lining means no separate slip needed. Strapless, so plan for a wrap or jacket for the ceremony.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/dress-the-population-kinley-strapless-a-line-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 17</div>
+        <div class="tag">MOST UPSCALE</div>
+        <div class="placeholder"><div class="swatch" style="background:#9CAE8E;"></div><div class="swatch-label">Sage Green</div><div class="silhouette-icon">Column midi</div><div class="no-image-note">image unavailable</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">Muma Wisteria</div>
+        <div class="name">Electra Sleeveless Silk Dress</div>
+        <div class="specs">
+          <span class="price">$485</span>
+          <span class="sep">·</span>
+          <span class="detail">Column midi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sleeveless</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#9CAE8E;"></div>
+          <div class="label">recommended in <strong>Sage Green</strong></div>
+        </div>
+        <div class="why">Real silk — the only true silk option in the budget. Silk is the single best fabric for hot-weather elegance: breathable, naturally cooling, drapes like nothing else. The most upscale option in the lookbook.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/muma-wisteria-electra-sleeveless-silk-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 18</div>
+        
+        <div class="carousel" data-count="4">
+        <img src="https://images.urbndata.com/is/image/Anthropologie/104734306_230_b?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Raya Long-Sleeve One-Shoulder Maxi view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://images.urbndata.com/is/image/Anthropologie/104734306_230_b2?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Raya Long-Sleeve One-Shoulder Maxi view 2" loading="lazy" class="slide" data-idx="1"><img src="https://images.urbndata.com/is/image/Anthropologie/104734306_230_b3?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Raya Long-Sleeve One-Shoulder Maxi view 3" loading="lazy" class="slide" data-idx="2"><img src="https://images.urbndata.com/is/image/Anthropologie/104734306_230_b4?wid=1000&amp;fmt=webp&amp;qlt=80" alt="Raya Long-Sleeve One-Shoulder Maxi view 4" loading="lazy" class="slide" data-idx="3">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#7E3F4D;"></div><div class="swatch-label">Mulberry Plum</div><div class="silhouette-icon">Asymmetric column maxi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">DIARRABLU</div>
+        <div class="name">Raya Long-Sleeve One-Shoulder Maxi</div>
+        <div class="specs">
+          <span class="price">$385</span>
+          <span class="sep">·</span>
+          <span class="detail">Asymmetric column maxi</span>
+          <span class="sep">·</span>
+          <span class="detail">One long sleeve</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#7E3F4D;"></div>
+          <div class="label">recommended in <strong>Mulberry Plum</strong></div>
+        </div>
+        <div class="why">DIARRABLU is a Senegalese-American designer whose pieces feel architectural and modern — the dress that reads &#x27;this woman has style.&#x27; Long sleeves but the lightweight fabric and one-shoulder cut keep it summer-appropriate.</div>
+        <a class="shop-link" href="https://www.anthropologie.com/shop/diarrablu-raya-long-sleeve-one-shoulder-maxi-dress" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 19</div>
+        <div class="tag">CLASSIC MOG</div>
+        <div class="carousel" data-count="6">
+        <img src="https://www.adriannapapell.com/cdn/shop/files/AP1E209508_AG484_Regular_Default.jpg" alt="Beaded Midi Dress with Sheer Ruffled Sleeves view 1" loading="lazy" class="slide active" data-idx="0"><img src="https://www.adriannapapell.com/cdn/shop/files/AP1E209508_AG484_Regular_Side.jpg" alt="Beaded Midi Dress with Sheer Ruffled Sleeves view 2" loading="lazy" class="slide" data-idx="1"><img src="https://www.adriannapapell.com/cdn/shop/files/AP1E209508_AG484_Regular_Back.jpg" alt="Beaded Midi Dress with Sheer Ruffled Sleeves view 3" loading="lazy" class="slide" data-idx="2"><img src="https://www.adriannapapell.com/cdn/shop/files/AP1E209508_AG484_Regular_Detail.jpg" alt="Beaded Midi Dress with Sheer Ruffled Sleeves view 4" loading="lazy" class="slide" data-idx="3"><img src="https://www.adriannapapell.com/cdn/shop/files/AP1E209508_AG484_Regular_Alternate.jpg" alt="Beaded Midi Dress with Sheer Ruffled Sleeves view 5" loading="lazy" class="slide" data-idx="4"><img src="https://www.adriannapapell.com/cdn/shop/files/AP1E209508_AG484_Regular_Lifestyle.jpg" alt="Beaded Midi Dress with Sheer Ruffled Sleeves view 6" loading="lazy" class="slide" data-idx="5">
+        <button class="nav prev" aria-label="Previous">‹</button>
+        <button class="nav next" aria-label="Next">›</button>
+        <div class="dots"><button class="dot active" data-idx="0" aria-label="View 1"></button><button class="dot" data-idx="1" aria-label="View 2"></button><button class="dot" data-idx="2" aria-label="View 3"></button><button class="dot" data-idx="3" aria-label="View 4"></button><button class="dot" data-idx="4" aria-label="View 5"></button><button class="dot" data-idx="5" aria-label="View 6"></button></div>
+      </div><div class="placeholder fallback" style="display:none;"><div class="swatch" style="background:#B4C2A8;"></div><div class="swatch-label">Frosted Sage</div><div class="silhouette-icon">Beaded fit-and-flare midi</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">Adrianna Papell</div>
+        <div class="name">Beaded Midi Dress with Sheer Ruffled Sleeves</div>
+        <div class="specs">
+          <span class="price">~$329</span>
+          <span class="sep">·</span>
+          <span class="detail">Beaded fit-and-flare midi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sheer ruffled sleeves</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#B4C2A8;"></div>
+          <div class="label">recommended in <strong>Frosted Sage</strong></div>
+        </div>
+        <div class="why">The canonical mother-of-the-groom dress from the canonical mother-of brand. 3D floral beading on a fitted bodice with a soft skirt and sheer ruffle sleeves — the kind of dress that gets compliments all night. Frosted sage is the prettiest version they make.</div>
+        <a class="shop-link" href="https://www.adriannapapell.com/products/beaded-midi-dress-with-sheer-ruffled-sleeves-in-frosted-sage-ap1e209508" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="image-wrap">
+        <div class="number">No. 20</div>
+        <div class="tag">MOST FLATTERING</div>
+        <div class="placeholder"><div class="swatch" style="background:#C0CFB8;"></div><div class="swatch-label">Icy Sage</div><div class="silhouette-icon">Faux wrap midi</div><div class="no-image-note">image unavailable</div></div>
+      </div>
+      <div class="body">
+        <div class="brand">Adrianna Papell</div>
+        <div class="name">Beaded Faux Wrap Dress with Sheer Cap Sleeves</div>
+        <div class="specs">
+          <span class="price">~$329</span>
+          <span class="sep">·</span>
+          <span class="detail">Faux wrap midi</span>
+          <span class="sep">·</span>
+          <span class="detail">Sheer cap sleeves</span>
+        </div>
+        <div class="color-row">
+          <div class="swatch-mini" style="background:#C0CFB8;"></div>
+          <div class="label">recommended in <strong>Icy Sage</strong></div>
+        </div>
+        <div class="why">Wrap silhouette is universally flattering on every body type — cinches the waist, glides over the hips. The all-over sequins-and-beading texture catches light beautifully without being ostentatious. Sheer cap sleeves keep it elegant and cool.</div>
+        <a class="shop-link" href="https://www.adriannapapell.com/products/beaded-faux-wrap-dress-with-sheer-cap-sleeves-in-icy-sage-ap1e210922" target="_blank" rel="noopener">
+          shop the dress <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-divider"></div>
+    <p>tap any dress to shop. text me your favorites and we'll narrow it down together.</p>
+    <p class="signoff">— with love</p>
+  </footer>
+
+<script>
+// ─── Carousel behavior ─────────────────────────────
+document.querySelectorAll('.carousel').forEach(c => {
+  const slides = c.querySelectorAll('.slide');
+  const dots = c.querySelectorAll('.dot');
+  if (slides.length <= 1) return;
+  let idx = 0;
+  const go = (n) => {
+    idx = (n + slides.length) % slides.length;
+    slides.forEach((s,i) => s.classList.toggle('active', i === idx));
+    dots.forEach((d,i) => d.classList.toggle('active', i === idx));
+  };
+  c.querySelector('.prev')?.addEventListener('click', e => { e.preventDefault(); go(idx - 1); });
+  c.querySelector('.next')?.addEventListener('click', e => { e.preventDefault(); go(idx + 1); });
+  dots.forEach(d => d.addEventListener('click', e => { e.preventDefault(); go(+d.dataset.idx); }));
+
+  // Swipe on touch devices
+  let startX = null;
+  c.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  c.addEventListener('touchend', e => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+    startX = null;
+  });
+
+  // If the first image fails to load, show the color-swatch fallback instead
+  const firstImg = slides[0];
+  const fallback = c.parentElement.querySelector('.placeholder.fallback');
+  let failed = 0;
+  slides.forEach(img => {
+    img.addEventListener('error', () => {
+      failed++;
+      if (failed === slides.length && fallback) {
+        c.style.display = 'none';
+        fallback.style.display = 'flex';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
